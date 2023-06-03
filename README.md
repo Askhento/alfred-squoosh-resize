@@ -17,11 +17,20 @@ video here!!!!
 
 ## Parameters
 
-Workflow currently supports width or percentage syntax. It will always keep aspect ratio.
+Workflow currently supports width or percentage syntax.
 
-```
+- It will always keep aspect ratio.
+- Parameters separated with space.
+- By default "px" assumed.
+
+```bash
 sq [width_value[px]]|[percent_value%] ...
-#for example
+```
+
+For example:
+
+```bash
+#three files will be saved
 sq 256 128px 5%
 ```
 
@@ -30,6 +39,8 @@ Processed files saved to the same location as original, with names :
 ```
 [filename]-parameter.[fileExtension]
 ```
+
+Be careful the is not safeguard on how big image you will produce!
 
 ## Contributing
 
