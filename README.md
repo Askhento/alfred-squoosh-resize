@@ -1,0 +1,1 @@
+# alfred-squoosh-resize
