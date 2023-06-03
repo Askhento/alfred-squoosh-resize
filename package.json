@@ -1,0 +1,23 @@
+{
+  "name": "alfred-squoosh-resize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "author": {
+    "name": "askhento",
+    "email": "mudarisowash@gmail.com",
+    "url": "https://github.com/Askhento/alfred-squoosh-resize"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@squoosh/lib": "^0.5.3",
+    "alfy": "^0.12.2",
+    "fs-extra": "^10.0.0"
+  }
+}
