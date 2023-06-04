@@ -13,7 +13,7 @@ npm i --global alfred-squoosh-resizer
 ## Usage
 
 Select file[s] in finder and then run keyword "sq"
-video here!!!!
+![screen](./img/screen.gif)
 
 ## Parameters
 
@@ -22,6 +22,7 @@ Workflow currently supports width or percentage syntax.
 - It will always keep aspect ratio.
 - Parameters separated with space.
 - By default "px" assumed.
+- Will skip unkown parameters
 
 ```bash
 sq [width_value[px]]|[percent_value%] ...

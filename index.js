@@ -46,17 +46,29 @@ async function precessFiles() {
 
             for (let resoulutionString of resolutions) {
 
+
                 let outputWidth;
-                if (resoulutionString.endsWith("%")) {
-                    const percent = Number(resoulutionString.slice(0, -1))
-                    outputWidth = Math.round(width * percent / 100.0)
-                } else {
-                    if (resoulutionString.endsWith("px")) {
-                        resoulutionString = resoulutionString.slice(0, -2);
+
+                try {
+                    if (resoulutionString.endsWith("%")) {
+                        const percent = parseFloat(resoulutionString.slice(0, -1))
+                        outputWidth = Math.round(width * percent / 100.0)
+                    } else {
+                        if (resoulutionString.endsWith("px")) {
+                            outputWidth = parseFloat(resoulutionString.slice(0, -2))
+                        } else {
+                            outputWidth = parseFloat(resoulutionString)
+                        }
                     }
-                    outputWidth = Number(resoulutionString)
+                }
+                catch (err) {
+                    alfy.log(err);
+                    continue;
                 }
 
+                alfy.log(outputWidth)
+
+                if (outputWidth === 0 || isNaN(outputWidth)) continue;
 
                 const preprocessOptions = {
                     resize: {
